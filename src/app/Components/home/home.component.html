@@ -1,0 +1,27 @@
+<div class="header"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3 col-md-6" *ngFor="let item of cardsData">
+
+      <a routerLink="shared">
+        <div class="card">
+          <div class="card-body">
+            <img [src]="item.image" class="card-img-top image mb-3" alt="...">
+            <h6 class="card-title text-center"> {{item.name}} </h6>
+            <div class="delivery"><i class="bi bi-check-circle"></i> خصم تأجير {{item.rental_discount}}%
+            </div>
+            <div class="allowed_Kilos"><i class="bi bi-check-circle"></i> السماح ب {{item.allowed_Kilos}} كيلو اضافية
+            </div>
+            <div class="extra_hours"> <i class="bi bi-check-circle"></i> السماح ب {{item.extra_hours}}ساعات اضافية</div>
+
+            <div class="discount"><i class="bi bi-check-circle"></i> خصم {{item.delivery_discount_regions}}% عند التسليم
+              من المناطق المختلفة </div>
+            <div class="piont"><i class="bi bi-check-circle"></i> 1000 ريال مدفوع يساوى {{item.ratio_points}} نقطة من
+              ابو دياب </div>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</div>
